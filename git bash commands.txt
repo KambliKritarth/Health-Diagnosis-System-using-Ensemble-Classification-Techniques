@@ -1,0 +1,3 @@
+source virtua/Scripts/activate
+cd medblog
+python manage.py runserver
