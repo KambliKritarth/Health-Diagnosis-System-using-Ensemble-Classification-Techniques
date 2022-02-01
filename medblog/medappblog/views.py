@@ -6,3 +6,6 @@ def home(request):
 
 def covid(request):
     return render(request,'COVID19.html',{})
+
+def heartdisease(request):
+    return render(request,'heartdisease.html',{})
