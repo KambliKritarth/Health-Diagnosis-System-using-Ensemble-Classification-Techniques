@@ -9,3 +9,6 @@ def covid(request):
 
 def heartdisease(request):
     return render(request,'heartdisease.html',{})
+
+def diabetes(request):
+    return render(request,'diabetes.html',{})
