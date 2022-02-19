@@ -1,0 +1,2 @@
+git bash commands.txt
+potential.txt

@@ -1,19 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1><font face = "Noe"><b>Diabetes Diagnosis</b></h1>
 <form>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Age</label>
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       <div id="emailHelp" class="form-text">Make sure it's a number</div>
     </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Did the patient had anaemia?
-      </label>
-    </div>
-    <br>
+    
   
   </br>
     <div class="input-group mb-3">
@@ -26,7 +21,7 @@
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
       <label class="form-check-label" for="flexCheckDefault">
-        Did the patient had <a href = "{% url 'diabetes' %}">anaemia?</a>?
+        Did the patient had <a href = "{% url 'diabetes' %}">anaemia</a>?
       </label>
     </div>
     <br>
@@ -42,7 +37,7 @@
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
       <label class="form-check-label" for="flexCheckDefault">
-        Does the patient have high blood pressure?
+        Does the subject have high blood pressure?
       </label>
     </div>
     <br>
@@ -73,7 +68,7 @@
   <div class="form-check">
     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
     <label class="form-check-label" for="flexCheckDefault">
-      Do they smoke?
+      Do the subject smoke?
     </label>
   </div>
   <br>
@@ -86,7 +81,7 @@
   <br>
     
   </br>
-    <button type="submit" class="btn btn-primary">Check if the conditional can be fatal or not?</button>
+    <button type="submit" class="btn btn-primary">Check the severity of the patient?</button>
     <br>
     
   </br>
