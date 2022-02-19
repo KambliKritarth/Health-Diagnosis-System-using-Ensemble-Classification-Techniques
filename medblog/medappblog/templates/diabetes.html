@@ -1,4 +1,95 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Age</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Make sure it's a number</div>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Did the patient had anaemia?
+      </label>
+    </div>
+    <br>
+  
+  </br>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Level of Creatinine Phosphokinase</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <br>
+    
+  </br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Did the patient had <a href = "{% url 'diabetes' %}">anaemia?</a>?
+      </label>
+    </div>
+    <br>
+    
+  </br>
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Level of Ejection Fraction</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <br>
+    
+  </br>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Does the patient have high blood pressure?
+      </label>
+    </div>
+    <br>
+    
+  </br>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Level of Serum Creatinine</span>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <br>
+    
+  </br>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Level of Serum Sodium</span>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <br>
+    
+  </br>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+    <option selected>Sex</option>
+    <option value="1">Male</option>
+    <option value="2">Female</option>
+  </select>
+  <br>
+    
+  </br>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Do they smoke?
+    </label>
+  </div>
+  <br>
+    
+  </br>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="inputGroup-sizing-default">Follow up time since the last heart attack</span>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+  <br>
+    
+  </br>
+    <button type="submit" class="btn btn-primary">Check if the conditional can be fatal or not?</button>
+    <br>
+    
+  </br>
+  </form>
+  <br>
 {% endblock %}
