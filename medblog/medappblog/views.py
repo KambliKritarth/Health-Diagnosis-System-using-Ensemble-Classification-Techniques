@@ -15,8 +15,7 @@ def diabetes(request):
 
 
 def submitmyform(request):
-    '''dbf = request.GET['DBF'] #not getting dbf
-    return dbf'''
+    
     model = Score
     all_scores = Score.objects.all
     
