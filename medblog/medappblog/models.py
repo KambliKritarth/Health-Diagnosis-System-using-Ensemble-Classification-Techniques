@@ -18,3 +18,21 @@ class HDSymptom(models.Model):
     sex = models.CharField
     smoking = models.CharField
     followUpTime = models.IntegerField
+
+'''
+    there needs to be (default = "smth") after each .DataTypeField
+    
+    In heartdisease.html 
+    ==> create a form with <form method = "POST">
+    .
+    .
+    .
+    </form>
+
+    In views.py 
+    ==> we will need to import HDSymptom class from theblog.models 
+    ==> In function formsubmissionheartdisease:
+        ==> 
+
+
+'''
