@@ -10,7 +10,6 @@ class HDSymptom(models.Model):
     age = models.IntegerField(default=0)
     anaemia = models.CharField(default="")
     CreatiPhosph = models.IntegerField(default=0)
-    anaemia = models.CharField(default="")
     EjectFract = models.IntegerField(default=0)
     highBP = models.CharField(default="")
     SerCreat = models.IntegerField(default=0)

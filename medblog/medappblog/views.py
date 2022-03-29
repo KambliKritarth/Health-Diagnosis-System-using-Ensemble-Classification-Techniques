@@ -15,11 +15,11 @@ def heartdisease(request):
 def diabetes(request):
     return render(request,'diabetes.html',{})
 
-def getPredictions(Tenthmarks, Twelfthmarks, Gender, Sports, Indo, Danc, Teach, Art, Sing, WestClass, Fest, Speech, Gam, Strict, ClassR, Pers, Oly, OlyMar,  Head):
+def getPredictions(age, anaemia, CreatiPhosph, anaemia, EjectFract, highBP, SerCreat, SerSodiu, sex, smoking, followUpTime):
     
     model = pickle.load(open("careerguide.sav","rb"))
     scaled = pickle.load(open("careerguidescaler.sav","rb"))
-    prediction = random.choice(tuple(sample_set))
+    prediction = model.predict(scaled.transform([age, anaemia, CreatiPhosph, anaemia, EjectFract, highBP, SerCreat, SerSodiu, sex, smoking, followUpTime]))
     return prediction
 
 def submitmyform(request):
