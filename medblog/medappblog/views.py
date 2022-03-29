@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from medappblog.models import HDSymptom
+import pickle
 
 # Create your views here.
 def home(request):
@@ -13,18 +15,23 @@ def heartdisease(request):
 def diabetes(request):
     return render(request,'diabetes.html',{})
 
+def getPredictions(Tenthmarks, Twelfthmarks, Gender, Sports, Indo, Danc, Teach, Art, Sing, WestClass, Fest, Speech, Gam, Strict, ClassR, Pers, Oly, OlyMar,  Head):
+    
+    model = pickle.load(open("careerguide.sav","rb"))
+    scaled = pickle.load(open("careerguidescaler.sav","rb"))
+    prediction = random.choice(tuple(sample_set))
+    return prediction
 
 def submitmyform(request):
     
-    model = Score
-    all_scores = Score.objects.all
+    model = HDSymptom
+    all_scores = HDSymptom.objects.all
     
     #print(mydictionary["name"]), name = mydictionary["name"], lastname = mydictionary["lastname"],
-    result =getPredictions(request.POST.get('Tenthmarks',0) , request.POST.get('Twelfthmarks',0), request.POST.get('Gender',0) , request.POST.get('Sports',0) ,request.POST.get('Indo',0) , request.POST.get('Danc',0), request.POST.get('Teach',0), request.POST.get('Art',0), request.POST.get('Sing',0), request.POST.get('WestClass',0), request.POST.get('Fest',0), request.POST.get('Speech',0), request.POST.get('Gam',0), request.POST.get('Strict',0), request.POST.get('ClassR',0),request.POST.get('Pers',0), request.POST.get('Oly',0), request.POST.get('OlyMar',0), request.POST.get('Head',0))
-    sample_set = {"Software Engineer", "Investment Banker", "Consultant", "Product Designer","Financial Accountant","Bank Engineer","Jr. College Professor","Physiotherapist","Civil Engineer","Architect","Orthodontist","Sales Manager"}
+    result =getPredictions(request.POST.get('age',0) , request.POST.get('anaemia',0), request.POST.get('EjectFract',0) , request.POST.get('highBP',0) ,request.POST.get('SerCreat',0) , request.POST.get('SerSodiu',0), request.POST.get('sex',0), request.POST.get('smoking',0), request.POST.get('Sing',0), request.POST.get('followUpTime',0))
    
-    ins = Score( result, DataBaseF, CA, DCS, Net, SoftWD, ProgSkills, AIML, SWE, BusinessAnalysis, DataScience, GraphDesign)
+    ins = HDSymptom( result,age, anaemia, CreatiPhosph, anaemia, EjectFract, highBP, SerCreat, SerSodiu, sex, smoking, followUpTime )
 
     ins.save()
-    print(result)
+    #print(result)
     return render(request,'submitmyform.html',{'submitmyform':result})
