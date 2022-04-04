@@ -8,14 +8,14 @@ class Disease(models.Model):
     
 class HDSymptom(models.Model):
     age = models.IntegerField(default=0)
-    anaemia = models.CharField(default="")
+    anaemia = models.CharField(default = "",max_length=255)
     CreatiPhosph = models.IntegerField(default=0)
     EjectFract = models.IntegerField(default=0)
-    highBP = models.CharField(default="")
+    highBP = models.CharField(default = "",max_length=255)
     SerCreat = models.IntegerField(default=0)
     SerSodiu = models.IntegerField(default=0)
-    sex = models.CharField(default="")
-    smoking = models.CharField(default="")
+    sex = models.CharField(default = "",max_length=255)
+    smoking = models.CharField(default = "",max_length=255)
     followUpTime = models.IntegerField(default=0)
 
 '''
